@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="rqtest.cpp">
+    <ClCompile Include="RemoveOneElement.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
