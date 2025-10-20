@@ -171,6 +171,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RemoveOneElement", "rqtest\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BillBoardIIResolve", "BillBoardIIResolve\BillBoardIIResolve.vcxproj", "{C14BB074-F0F0-4154-A5C2-AE164E4EF33E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hoofball", "Hoofball\Hoofball.vcxproj", "{83004066-7ECE-4BE2-A382-70601F10CA33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -851,6 +853,14 @@ Global
 		{C14BB074-F0F0-4154-A5C2-AE164E4EF33E}.Release|x64.Build.0 = Release|x64
 		{C14BB074-F0F0-4154-A5C2-AE164E4EF33E}.Release|x86.ActiveCfg = Release|Win32
 		{C14BB074-F0F0-4154-A5C2-AE164E4EF33E}.Release|x86.Build.0 = Release|Win32
+		{83004066-7ECE-4BE2-A382-70601F10CA33}.Debug|x64.ActiveCfg = Debug|x64
+		{83004066-7ECE-4BE2-A382-70601F10CA33}.Debug|x64.Build.0 = Debug|x64
+		{83004066-7ECE-4BE2-A382-70601F10CA33}.Debug|x86.ActiveCfg = Debug|Win32
+		{83004066-7ECE-4BE2-A382-70601F10CA33}.Debug|x86.Build.0 = Debug|Win32
+		{83004066-7ECE-4BE2-A382-70601F10CA33}.Release|x64.ActiveCfg = Release|x64
+		{83004066-7ECE-4BE2-A382-70601F10CA33}.Release|x64.Build.0 = Release|x64
+		{83004066-7ECE-4BE2-A382-70601F10CA33}.Release|x86.ActiveCfg = Release|Win32
+		{83004066-7ECE-4BE2-A382-70601F10CA33}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
