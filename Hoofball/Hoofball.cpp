@@ -4,59 +4,61 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <cmath>
-
 using namespace std;
 
-int main()
-{
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    // USACO file I/O
     freopen("hoofball.in", "r", stdin);
     freopen("hoofball.out", "w", stdout);
-
 
     int N;
     cin >> N;
     vector<int> x(N);
-
     for (int i = 0; i < N; i++) cin >> x[i];
 
+    // 1) Sort positions so we can decide nearest neighbors by index.
     sort(x.begin(), x.end());
 
+    // to[i] = index that cow i passes to; indeg[j] = how many pass to j
     vector<int> to(N, -1), indeg(N, 0);
-    for (int i = 0; i < N; i++)
-    {
-        if (i == 0) to[i] = 1;
-        else if (i == N - 1) to[i] = N - 2;
-        else
-        {
+
+    // 2) Build the directed graph: each cow passes to the nearest neighbor.
+    for (int i = 0; i < N; i++) {
+        if (i == 0) to[i] = 1;                // left end: must pass right
+        else if (i == N - 1) to[i] = N - 2;   // right end: must pass left
+        else {
             int dl = x[i] - x[i - 1];
             int dr = x[i + 1] - x[i];
+            // Tie goes to the left neighbor per problem statement
             to[i] = (dl <= dr) ? i - 1 : i + 1;
         }
         indeg[to[i]]++;
     }
 
-
     int ans = 0;
-    for (int i = 0; i < N; i++)
-    {
+
+    // 3) Each zero-indegree node needs a new ball (a new starting throw).
+    for (int i = 0; i < N; i++) {
         if (indeg[i] == 0) ans++;
     }
 
-    for (int i = 0; i + 1 < N; i++)
-    {
-        if (to[i] == i + 1 and to[i + 1] == i)
-        {
-            if (indeg[i] == 1 and indeg[i + 1] == 1) ans++;
+    // 4) Handle isolated mutual pairs (2-cycles) where both nodes have indegree 1.
+    // These components are not reached by anyone else, but a single extra ball
+    // suffices to cover each such pair.
+    for (int i = 0; i + 1 < N; i++) {
+        if (to[i] == i + 1 && to[i + 1] == i) {        // mutual pair
+            if (indeg[i] == 1 && indeg[i + 1] == 1)    // isolated (no extra in-edges)
+                ans++;
         }
     }
 
-    cout << ans << endl;
+    cout << ans << '\n';
     return 0;
 }
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu

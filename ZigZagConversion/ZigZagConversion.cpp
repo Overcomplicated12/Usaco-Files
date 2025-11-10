@@ -34,56 +34,68 @@
 
 #include <iostream>
 #include <vector>
-#include <algorithm>
-#include <climits>
-
 using namespace std;
+
 const long long MOD = 1'000'000'007LL;
 
 int main()
 {
     string s;
-    cin >> s;
-    int n;
-    cin >> n;
+    cin >> s;   // Input string (all uppercase letters)
 
+    int n;
+    cin >> n;   // Number of rows for zigzag pattern
+
+    // Special case: if we only have 1 row, or rows >= length of string,
+    // then the zigzag does nothing. The result is just the original string.
     if (n == 1 || n >= (int)s.size())
     {
         long long val = 0;
         for (char c : s)
         {
-            int d = c - 'A';
-            val = (val * 26 + d) % MOD;
+            int d = c - 'A';              // Convert char to digit 0–25
+            val = (val * 26 + d) % MOD;   // Base 26 conversion
         }
 
         cout << val << endl;
         return 0;
     }
 
+    // `rows[i]` stores the characters in the i-th zigzag row
     vector<string> rows(n);
-    int r = 0, dir = 1;
+
+    int r = 0;     // Current row
+    int dir = 1;   // Direction: +1 → going down, -1 → going up
+
+    // Build the zigzag by placing characters row-by-row
     for (char c : s)
     {
-        rows[r].push_back(c);
-        r += dir;
-        if (r == 0 || r == n - 1) dir *= -1;
+        rows[r].push_back(c);  // Place character in current row
+        r += dir;              // Move to next row in direction
+
+        // If we hit the top or bottom row, flip direction
+        if (r == 0 || r == n - 1)
+            dir *= -1;
     }
 
+    // Concatenate all rows to form the final zigzag string
     string t;
     t.reserve(s.size());
-    for (auto row : rows) t += row;
+    for (auto row : rows)
+        t += row;
 
+    // Convert final string t into a base-26 number mod 1e9+7
     long long ans = 0;
     for (char c : t)
     {
-        int d = c - 'A';
-        ans = (ans * 26 + d) % MOD;
+        int d = c - 'A';             // Convert char to digit 0–25
+        ans = (ans * 26 + d) % MOD;  // Multiply and add (base-26)
     }
 
     cout << ans << endl;
     return 0;
-
 }
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu

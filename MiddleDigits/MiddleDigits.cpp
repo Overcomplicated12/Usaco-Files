@@ -23,38 +23,51 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <cmath>
-
 using namespace std;
 
-long long sixsept = 7;
+long long sixsept = 7; // The base number (we are computing 7^n)
+
 int main()
 {
     int n;
-    cin >> n;
+    cin >> n;   // Read exponent
 
-    vector<int>digits;
-    digits.push_back(1);
+    // We store the number as a vector of digits (in reverse order).
+    // Example: number 1234 is stored as {4, 3, 2, 1}.
+    vector<int> digits;
+    digits.push_back(1); // Start with 7^0 = 1
 
+    // Multiply by 7 exactly n times to compute 7^n manually (big integer multiplication)
     for (int i = 0; i < n; i++)
     {
         int carry = 0;
         for (int j = 0; j < digits.size(); j++)
         {
+            // Multiply digit by 7 + add carry
             long long val = digits[j] * sixsept + carry;
+
+            // Store the last digit of the result
             digits[j] = val % 10;
+
+            // Carry the remaining part
             carry = val / 10;
         }
-        while (carry) {
+
+        // If there is leftover carry, add those digits
+        while (carry)
+        {
             digits.push_back(carry % 10);
             carry /= 10;
         }
     }
 
+    // The digits are currently reversed; correct the order.
     reverse(digits.begin(), digits.end());
 
-    int len = digits.size();
+    int len = digits.size(); // Total number of digits in 7^n
 
+    // If the number of digits is odd → print the single middle digit
+    // If even → print the middle two digits
     if (len % 2 == 1)
     {
         cout << digits[len / 2] << endl;
@@ -66,6 +79,7 @@ int main()
 
     return 0;
 }
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu

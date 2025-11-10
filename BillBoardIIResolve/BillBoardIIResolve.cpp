@@ -3,57 +3,43 @@
 
 #include <iostream>
 #include <algorithm>
-#include <cmath>
-
 using namespace std;
-int main()
-{
-    freopen("billboard.in", "r", stdin); freopen("billboard.out", "w", stdout);
-    int x1, y1, x2, y2, x3, y3, x4, y4;
+
+int main() {
+    freopen("billboard.in", "r", stdin);
+    freopen("billboard.out", "w", stdout);
+
+    int x1, y1, x2, y2; // billboard
+    int x3, y3, x4, y4; // covering rect (e.g., truck)
     cin >> x1 >> y1 >> x2 >> y2;
     cin >> x3 >> y3 >> x4 >> y4;
 
-    int area_lawnmower = (x2 - x1) * (y2 - y1);
+    int area = (x2 - x1) * (y2 - y1);
 
-    if (x4 >= x2 and x3 <= x1 and y3 <= y1 and y4 >= y2)
-    {
-        cout << 0 << endl;
+    // If fully covered
+    if (x3 <= x1 && x4 >= x2 && y3 <= y1 && y4 >= y2) {
+        cout << 0 << '\n';
+        return 0;
     }
-    else if (x3 <= x1 && x4 >= x2)
-    {
-        int yl = max(y1, y3);
-        int yr = min(y2, y4);
-        if (y2 > y4 && y1 < y3)
-        {
-            cout << area_lawnmower << endl;
-        }
-        else if (yr > yl)
-            cout << area_lawnmower - (x2 - x1) * (yr - yl) << endl;
 
-        else
-            cout << area_lawnmower << endl;
+    // Overlap rectangle
+    int w = max(0, min(x2, x4) - max(x1, x3));
+    int h = max(0, min(y2, y4) - max(y1, y3));
+
+    // Subtract only if the cover spans the full width OR the full height.
+    // (This is the rule for Blocked Billboard I.)
+    if ((x3 <= x1 && x4 >= x2) && h > 0) {
+        cout << area - (x2 - x1) * h << '\n';
     }
-    else if (y3 <= y1 && y4 >= y2)
-    {
-        int xl = max(x1, x3);
-        int xr = min(x2, x4);
-        if (x2 > x4 && x1 < x3)
-        {
-            cout << area_lawnmower << endl;
-        }
-        else if (xr > xl)
-            cout << area_lawnmower - (xr - xl) * (y2 - y1) << endl;
-
-
-        else
-            cout << area_lawnmower << endl;
+    else if ((y3 <= y1 && y4 >= y2) && w > 0) {
+        cout << area - w * (y2 - y1) << '\n';
     }
-    else
-    {
-
-        cout << area_lawnmower << endl;
+    else {
+        cout << area << '\n';
     }
+    return 0;
 }
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu

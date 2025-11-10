@@ -5,56 +5,58 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-#include <cmath>
 using namespace std;
-int main()
-{
 
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    // For USACO local file I/O. Remove/comment these lines if submitting to an online judge
+    // that reads from stdin/stdout directly.
     freopen("guess.in", "r", stdin);
     freopen("guess.out", "w", stdout);
 
-    int N; cin >> N;
+    int N;
+    cin >> N;
+
+    // characteristics[i] = list of traits for animal i
     vector<vector<string>> characteristics(N);
-
-    for (int i = 0; i < N; i++)
-    {
+    for (int i = 0; i < N; i++) {
         string name;
-        cin >> name;
-        int K; cin >> K;
-        for (int j = 0; j < K; j++)
-        {
-            string charac; cin >> charac;
-            characteristics[i].push_back(charac);
-
+        cin >> name;     // animal name (not used in logic)
+        int K;
+        cin >> K;
+        characteristics[i].reserve(K);
+        for (int j = 0; j < K; j++) {
+            string trait;
+            cin >> trait;
+            characteristics[i].push_back(trait);
         }
     }
 
-    int ans = 0;
+    int bestCommon = 0;
 
-    for (int i = 0; i < N; i++)
-    {
-        for (int j = i + 1; j < N; j++)
-        {
+    // Check all pairs and count intersection size
+    for (int i = 0; i < N; i++) {
+        for (int j = i + 1; j < N; j++) {
             int common = 0;
-            for (string charac1 : characteristics[i])
-            {
-                for (string charac2 : characteristics[j])
-                {
-                    if (charac1 == charac2)
-                    {
-                        common++;
-                    }
+
+            // Naive O(K_i * K_j) intersection count
+            for (const string& a : characteristics[i]) {
+                for (const string& b : characteristics[j]) {
+                    if (a == b) common++;
                 }
             }
-            ans = max(ans, common);
+
+            bestCommon = max(bestCommon, common);
         }
     }
 
-    cout << ans+1 << endl;
+    // Strategy needs at most (max overlap + 1) yes-answers
+    cout << bestCommon + 1 << '\n';
+    return 0;
 }
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
