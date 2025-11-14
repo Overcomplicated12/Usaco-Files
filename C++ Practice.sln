@@ -167,6 +167,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "YearOfCow", "YearOfCow\Year
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BreedFlip Mad Scientist", "BreedFlip\BreedFlip.vcxproj", "{500A0BB2-594A-4ED7-A100-4BEB35214B67}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CowTipping", "CowTipping\CowTipping.vcxproj", "{E4C1D1C2-39A7-4800-83B5-BAB119FBB23A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -831,6 +833,14 @@ Global
 		{500A0BB2-594A-4ED7-A100-4BEB35214B67}.Release|x64.Build.0 = Release|x64
 		{500A0BB2-594A-4ED7-A100-4BEB35214B67}.Release|x86.ActiveCfg = Release|Win32
 		{500A0BB2-594A-4ED7-A100-4BEB35214B67}.Release|x86.Build.0 = Release|Win32
+		{E4C1D1C2-39A7-4800-83B5-BAB119FBB23A}.Debug|x64.ActiveCfg = Debug|x64
+		{E4C1D1C2-39A7-4800-83B5-BAB119FBB23A}.Debug|x64.Build.0 = Debug|x64
+		{E4C1D1C2-39A7-4800-83B5-BAB119FBB23A}.Debug|x86.ActiveCfg = Debug|Win32
+		{E4C1D1C2-39A7-4800-83B5-BAB119FBB23A}.Debug|x86.Build.0 = Debug|Win32
+		{E4C1D1C2-39A7-4800-83B5-BAB119FBB23A}.Release|x64.ActiveCfg = Release|x64
+		{E4C1D1C2-39A7-4800-83B5-BAB119FBB23A}.Release|x64.Build.0 = Release|x64
+		{E4C1D1C2-39A7-4800-83B5-BAB119FBB23A}.Release|x86.ActiveCfg = Release|Win32
+		{E4C1D1C2-39A7-4800-83B5-BAB119FBB23A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
