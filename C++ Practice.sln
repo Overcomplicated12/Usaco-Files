@@ -169,6 +169,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BreedFlip Mad Scientist", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CowTipping", "CowTipping\CowTipping.vcxproj", "{E4C1D1C2-39A7-4800-83B5-BAB119FBB23A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DontBeLast", "DontBeLast\DontBeLast.vcxproj", "{BCEBECA7-E11A-4BA8-8ED0-F8D28D93F8D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -841,6 +843,14 @@ Global
 		{E4C1D1C2-39A7-4800-83B5-BAB119FBB23A}.Release|x64.Build.0 = Release|x64
 		{E4C1D1C2-39A7-4800-83B5-BAB119FBB23A}.Release|x86.ActiveCfg = Release|Win32
 		{E4C1D1C2-39A7-4800-83B5-BAB119FBB23A}.Release|x86.Build.0 = Release|Win32
+		{BCEBECA7-E11A-4BA8-8ED0-F8D28D93F8D5}.Debug|x64.ActiveCfg = Debug|x64
+		{BCEBECA7-E11A-4BA8-8ED0-F8D28D93F8D5}.Debug|x64.Build.0 = Debug|x64
+		{BCEBECA7-E11A-4BA8-8ED0-F8D28D93F8D5}.Debug|x86.ActiveCfg = Debug|Win32
+		{BCEBECA7-E11A-4BA8-8ED0-F8D28D93F8D5}.Debug|x86.Build.0 = Debug|Win32
+		{BCEBECA7-E11A-4BA8-8ED0-F8D28D93F8D5}.Release|x64.ActiveCfg = Release|x64
+		{BCEBECA7-E11A-4BA8-8ED0-F8D28D93F8D5}.Release|x64.Build.0 = Release|x64
+		{BCEBECA7-E11A-4BA8-8ED0-F8D28D93F8D5}.Release|x86.ActiveCfg = Release|Win32
+		{BCEBECA7-E11A-4BA8-8ED0-F8D28D93F8D5}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
