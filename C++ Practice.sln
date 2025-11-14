@@ -165,7 +165,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Square Pasture", "Square Pa
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "YearOfCow", "YearOfCow\YearOfCow.vcxproj", "{E3A26401-CB70-48D8-A012-D42F3D408CF0}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BreedFlip", "BreedFlip\BreedFlip.vcxproj", "{500A0BB2-594A-4ED7-A100-4BEB35214B67}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BreedFlip Mad Scientist", "BreedFlip\BreedFlip.vcxproj", "{500A0BB2-594A-4ED7-A100-4BEB35214B67}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "imgonnaputthisheretotest", "imgonnaputthisheretotest\imgonnaputthisheretotest.vcxproj", "{D43D759F-0383-4E89-B87B-87C7647058A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -831,6 +833,14 @@ Global
 		{500A0BB2-594A-4ED7-A100-4BEB35214B67}.Release|x64.Build.0 = Release|x64
 		{500A0BB2-594A-4ED7-A100-4BEB35214B67}.Release|x86.ActiveCfg = Release|Win32
 		{500A0BB2-594A-4ED7-A100-4BEB35214B67}.Release|x86.Build.0 = Release|Win32
+		{D43D759F-0383-4E89-B87B-87C7647058A5}.Debug|x64.ActiveCfg = Debug|x64
+		{D43D759F-0383-4E89-B87B-87C7647058A5}.Debug|x64.Build.0 = Debug|x64
+		{D43D759F-0383-4E89-B87B-87C7647058A5}.Debug|x86.ActiveCfg = Debug|Win32
+		{D43D759F-0383-4E89-B87B-87C7647058A5}.Debug|x86.Build.0 = Debug|Win32
+		{D43D759F-0383-4E89-B87B-87C7647058A5}.Release|x64.ActiveCfg = Release|x64
+		{D43D759F-0383-4E89-B87B-87C7647058A5}.Release|x64.Build.0 = Release|x64
+		{D43D759F-0383-4E89-B87B-87C7647058A5}.Release|x86.ActiveCfg = Release|Win32
+		{D43D759F-0383-4E89-B87B-87C7647058A5}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
