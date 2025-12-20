@@ -177,6 +177,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TheGreatRevegetation", "The
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LivestockLineup", "LivestockLineup\LivestockLineup.vcxproj", "{FF53C92B-F771-4991-B45C-D2D12B92EFDB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Unguarded Cells", "Unguarded Cells\Unguarded Cells.vcxproj", "{13F5755C-2F07-4404-89B3-22F97914A4B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -881,6 +883,14 @@ Global
 		{FF53C92B-F771-4991-B45C-D2D12B92EFDB}.Release|x64.Build.0 = Release|x64
 		{FF53C92B-F771-4991-B45C-D2D12B92EFDB}.Release|x86.ActiveCfg = Release|Win32
 		{FF53C92B-F771-4991-B45C-D2D12B92EFDB}.Release|x86.Build.0 = Release|Win32
+		{13F5755C-2F07-4404-89B3-22F97914A4B1}.Debug|x64.ActiveCfg = Debug|x64
+		{13F5755C-2F07-4404-89B3-22F97914A4B1}.Debug|x64.Build.0 = Debug|x64
+		{13F5755C-2F07-4404-89B3-22F97914A4B1}.Debug|x86.ActiveCfg = Debug|Win32
+		{13F5755C-2F07-4404-89B3-22F97914A4B1}.Debug|x86.Build.0 = Debug|Win32
+		{13F5755C-2F07-4404-89B3-22F97914A4B1}.Release|x64.ActiveCfg = Release|x64
+		{13F5755C-2F07-4404-89B3-22F97914A4B1}.Release|x64.Build.0 = Release|x64
+		{13F5755C-2F07-4404-89B3-22F97914A4B1}.Release|x86.ActiveCfg = Release|Win32
+		{13F5755C-2F07-4404-89B3-22F97914A4B1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
