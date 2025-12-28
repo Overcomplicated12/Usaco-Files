@@ -181,6 +181,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Unguarded Cells", "Unguarde
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MilkFactory", "MilkFactory\MilkFactory.vcxproj", "{EF039DDA-D1CD-4067-88DB-8092A5AFA30E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FarmerJohnsCheeseBlock", "FarmerJohnsCheeseBlock\FarmerJohnsCheeseBlock.vcxproj", "{DB421D01-E790-4703-A28A-316070D89FFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -901,6 +903,14 @@ Global
 		{EF039DDA-D1CD-4067-88DB-8092A5AFA30E}.Release|x64.Build.0 = Release|x64
 		{EF039DDA-D1CD-4067-88DB-8092A5AFA30E}.Release|x86.ActiveCfg = Release|Win32
 		{EF039DDA-D1CD-4067-88DB-8092A5AFA30E}.Release|x86.Build.0 = Release|Win32
+		{DB421D01-E790-4703-A28A-316070D89FFF}.Debug|x64.ActiveCfg = Debug|x64
+		{DB421D01-E790-4703-A28A-316070D89FFF}.Debug|x64.Build.0 = Debug|x64
+		{DB421D01-E790-4703-A28A-316070D89FFF}.Debug|x86.ActiveCfg = Debug|Win32
+		{DB421D01-E790-4703-A28A-316070D89FFF}.Debug|x86.Build.0 = Debug|Win32
+		{DB421D01-E790-4703-A28A-316070D89FFF}.Release|x64.ActiveCfg = Release|x64
+		{DB421D01-E790-4703-A28A-316070D89FFF}.Release|x64.Build.0 = Release|x64
+		{DB421D01-E790-4703-A28A-316070D89FFF}.Release|x86.ActiveCfg = Release|Win32
+		{DB421D01-E790-4703-A28A-316070D89FFF}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
