@@ -197,6 +197,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MakingMexes", "MakingMexes\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CountingSequences", "CountingSequences\CountingSequences.vcxproj", "{3C393CAB-0B0E-4B53-B6CB-71725461884D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpeedingTicket", "SpeedingTicket\SpeedingTicket.vcxproj", "{1FFF6B8E-D4A9-4871-9088-F5127A2DDA8E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -981,6 +983,14 @@ Global
 		{3C393CAB-0B0E-4B53-B6CB-71725461884D}.Release|x64.Build.0 = Release|x64
 		{3C393CAB-0B0E-4B53-B6CB-71725461884D}.Release|x86.ActiveCfg = Release|Win32
 		{3C393CAB-0B0E-4B53-B6CB-71725461884D}.Release|x86.Build.0 = Release|Win32
+		{1FFF6B8E-D4A9-4871-9088-F5127A2DDA8E}.Debug|x64.ActiveCfg = Debug|x64
+		{1FFF6B8E-D4A9-4871-9088-F5127A2DDA8E}.Debug|x64.Build.0 = Debug|x64
+		{1FFF6B8E-D4A9-4871-9088-F5127A2DDA8E}.Debug|x86.ActiveCfg = Debug|Win32
+		{1FFF6B8E-D4A9-4871-9088-F5127A2DDA8E}.Debug|x86.Build.0 = Debug|Win32
+		{1FFF6B8E-D4A9-4871-9088-F5127A2DDA8E}.Release|x64.ActiveCfg = Release|x64
+		{1FFF6B8E-D4A9-4871-9088-F5127A2DDA8E}.Release|x64.Build.0 = Release|x64
+		{1FFF6B8E-D4A9-4871-9088-F5127A2DDA8E}.Release|x86.ActiveCfg = Release|Win32
+		{1FFF6B8E-D4A9-4871-9088-F5127A2DDA8E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
